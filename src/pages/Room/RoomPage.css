@@ -1,0 +1,38 @@
+/* RoomPage.css */
+
+/* Base styles for the container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Adjust the meeting container to be flexible */
+  .meeting-container {
+    width: 100%;
+    height: 500px; /* Default height for larger screens */
+  }
+  
+  /* Adjust the layout for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .meeting-container {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  /* Adjust the layout for very small screens */
+  @media (max-width: 480px) {
+    .container {
+      padding: 5px;
+    }
+  
+    .meeting-container {
+      height: 200px; /* Adjust height for very small screens */
+    }
+  }
+  

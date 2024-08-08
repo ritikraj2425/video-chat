@@ -16,7 +16,9 @@ const RoomPage = () => {
       const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomId, Date.now().toString(), name);
       const zc = ZegoUIKitPrebuilt.create(kitToken);
       const currentHost = window.location.origin;
-      const shareLink = `${currentHost}/pages/room/${roomId}`;
+
+      // Append the name as a query parameter in the share link
+      const shareLink = `${currentHost}/pages/room/${roomId}?name=${encodeURIComponent(name)}`;
 
       zc.joinRoom({
         container: element,
